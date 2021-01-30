@@ -1,5 +1,6 @@
 var mysql = require('mysql');
 var inquirer = require('inquirer');
+var consTable = require('console.table');
 
 // set up the connection
 
@@ -25,8 +26,8 @@ function startPrompt() {
     name: "choice",
     choices: [
               "View All Employees?", 
-              "View All Employee's By Roles?",
-              "View all Emplyees By Deparments", 
+              "View All Employees By Roles?",
+              "View all Employees By Departments", 
               "Update Employee",
               "Add Employee?",
               "Add Role?",
@@ -39,10 +40,10 @@ function startPrompt() {
               viewAllEmployees();
             break;
     
-          case "View All Employee's By Roles?":
+          case "View All Employees By Roles?":
               viewAllRoles();
             break;
-          case "View all Emplyees By Deparments":
+          case "View all Employees By Deparments":
               viewAllDepartments();
             break;
           
